@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatBox Master - Interactive Beatboxing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 class="title">🎵 BEATBOX MASTER 🎵</h1>
+            <p class="subtitle">Create epic beats with advanced controls and real-time visualization</p>
+        </div>
+
+        <div class="controls-section">
+            <div class="volume-control">
+                <label>🔊 Volume:</label>
+                <input type="range" id="volumeSlider" min="0" max="100" value="70">
+                <span id="volumeValue">70%</span>
+            </div>
+            <div class="tempo-control">
+                <label>⏱️ Tempo:</label>
+                <input type="range" id="tempoSlider" min="60" max="200" value="120">
+                <span id="tempoValue">120 BPM</span>
+            </div>
+        </div>
+
+        <div class="beat-grid" id="beatGrid"></div>
+
+        <div class="visualizer-container">
+            <div class="frequency-visualizer" id="frequencyVisualizer"></div>
+            <canvas class="waveform-overlay" id="waveformCanvas"></canvas>
+        </div>
+
+        <div class="recording-controls">
+            <button class="control-btn" id="recordBtn">🎙️ Record Loop</button>
+            <button class="control-btn" id="playBtn">▶️ Play Loop</button>
+            <button class="control-btn" id="stopBtn">⏹️ Stop</button>
+            <button class="control-btn" id="clearBtn">🗑️ Clear</button>
+            <button class="control-btn" id="panicBtn">🚨 Stop All</button>
+        </div>
+
+        <div class="samples-section">
+            <h3>🎵 Sample Beats</h3>
+            <p>Try these pre-made beats to get started!</p>
+            <div class="samples-grid" id="samplesGrid"></div>
+        </div>
+
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-value" id="beatsCount">0</div>
+                <div class="stat-label">Total Beats</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="combo">0</div>
+                <div class="stat-label">Combo</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="bpm">0</div>
+                <div class="stat-label">Current BPM</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="score">0</div>
+                <div class="stat-label">Score</div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>🎮 Advanced Controls</h3>
+            <p>Use keyboard keys or click pads to trigger beats. Record loops, adjust tempo, and create complex rhythms!
+            </p>
+            <div class="key-bindings" id="keyBindings"></div>
+        </div>
+    </div>
+
+    <div class="combo-indicator" id="comboIndicator">COMBO x1</div>
+    <div class="beat-indicator" id="beatIndicator"></div>
+
+    <script src="script.js"></script>
+    <footer id="page-footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BeatBox Master</h4>
+                <p>© 2025 Ghost Masters (dukebismaya & BCassO) Studio</p>
+            </div>
+        </footer>
+</body>
+</html>
